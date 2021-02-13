@@ -4,9 +4,9 @@ Nie za krótkie wprowadzenie do technicznych testów
 
 1. Java jako idealny przykład języka obiektowego
 
-| Zadanie       | Przykład (Plik)    |
-| ------------- |:-------------:|
-| Trzy zasady programowania obiektowego | Hermetyzacja - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Hermetyzacja - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Dziedziczenie - Proces w którym jeden obiekt otrzymuje właściwości innego obiektu |
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Trzy zasady programowania obiektowego | Hermetyzacja - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Dziedziczenie - Proces w którym jeden obiekt otrzymuje właściwości innego obiektu <br/> Polimorfizm -To cecha, dzięki której jeden interfejs może być stosowany do wykonania różnych zadań |
 | Przygotowanie danych testowych. Zaprojektowanie testów weryfikujących jakość i ilość przeprocesowanych danych | Baza Danych - Test |
 
 
