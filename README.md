@@ -8,81 +8,39 @@ Nie za krótkie wprowadzenie do technicznych testów
 | :------------- |:-------------|
 | Trzy zasady programowania obiektowego | Hermetyzacja - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Dziedziczenie - Proces w którym jeden obiekt otrzymuje właściwości innego obiektu <br/> Polimorfizm -To cecha, dzięki której jeden interfejs może być stosowany do wykonania różnych zadań |
 | Przygotowanie danych testowych. Zaprojektowanie testów weryfikujących jakość i ilość przeprocesowanych danych | Baza Danych - Test |
+| Typy danych | Proste/podstawowe <br/> Całkowite <br/> Zmiennoprzecinkowe <br/> Znakowe <br/> Logiczne |
+| Instrukcje sterujące | Instrukcje wyboru <br/> Konstrukcja switch  |
+| Instrukcje iteracji | Pętla while <br/> Pętla do-while <br/> Pętla for <br/> Pętla for-each |
+| Instrukcje skoku | Instrukcja break <br/> Instrukcja continue <br/> Instrukcja return |
+| Klasa | To konstrukcja logiczna, zbiór metod zmiennych itp. które definiują obiekt. Ważne klasa definiuje nowy typ danych |
+| Obiekt | To zastosowanie klasy, wystąpienie klasy w praktyce |
+| new | Operator, który alokuje pamięć do działania obiektu i zwraca referencję do niego |
+| Konstruktor | Metoda o tej samej nazwie co klasa. inicjalizuje obiekt zaraz po jego utworzeniu. Czyli inicjalizuje wszystkie metody i zmienne w klasie |
+| this | Operator stosuje się w: <br/> Chaining - chcemy wywołać ze zmiennej obiektowej metody, które mają typ obiektu <br/> Parametryzacja - odróżnienie zmiennej lokalnej od parametru o tej samej nazwie |
+| Metoda przeciążona | Metoda o tej samej nazwie co istniejąca ale o innej liczbie i typie parametrów. Może zwracać też inny typ wartości. Plus jest taki, że możemy wykorzystywać wielokrotnie tę samą nazwę metody |
+| Metoda rekurencyjna | Metoda wywołująca samą siebie |
+| static | Zmienna statyczna - to zmienna globalna współdzielona przez wszystkie obiekty klasy <br/> Metoda statyczna - może wywoływać jedynie inne metody statyczne, ma dostęp jedynie do danych statycznych i nie można korzystać z this i super |
+| final | Zmienne - uniemożliwia modyfikację zmiennej <br/> Metody - uniemożliwia przesłanianiu i dziedziczeniu |
+| super (uwaga w C# nie istnieje) | Można wywołać konstruktor klasy bazowej <br/> Można wywołać, uzyskać dostęp do np. metoda klasy nadrzędnej, które zostały przesłonięte przez klasę pochodną |
+| Metoda przesłonięta | To taka metoda, która ma taką samą nazwę co metoda klasy bazowej. Zostanie ona wykonana. A ta z klasy bazowej ukryta |
+| Klasa abstrakcyjna | Klasa, która stanowi w pewnym sensie jedynie strukturę dla klas podrzędnych. Dopiero klasy dziedziczące implementują np. metody |
+| Pakiet | Przestrzeń nazw i sterowanie dostępem. Innymi słowy w pakiecie może istnieć tylko jedna klasa o danej nazwie |
+| Interfejs | To coś jak klasa abstrakcyjna ale ma jedną dużą zaletę, klasa może implementować dowolną liczbę interfejsów |
+| Modyfikatory dostępu | private - mamy dostęp jedynie w klasie, w której obiekt został zdefiniowany <br/> brak modyfikatora - mamy dostęp w klasie, w której został obiekt zdefiniowany, w podklasach i innych klasach ale dla danego pakietu <br/> protected - to samo co w przypadku braku modyfikatora + podklasy z innego pakietu <br/> public - dostępny w klasach i podklasach we wszystkich pakietach |
+| Typy wyjątków | |
+| Klauzula try catch | |
+| Garbage Collection | Jak już wiemy np. każdemu nowemu obiektowi przydzielana jest pamięć. W javie pamięcią i jej zwalnianiem nie zajmuje się programista, ale specjalna funkcja/metoda zwana garbage collector |
+| Kolekcje w Javie | Lista <br/> Zbiór <br/> Mapa|
 
-
-
-Polimorfizm -To cecha, dzięki której jeden interfejs może być stosowany do wykonania różnych zadań.
-1.2 Typy danych
-Proste/podstawowe
-Całkowite
-Zmiennoprzecinkowe
-Znakowe
-Logiczne
-1.3 Instrukcje sterujące
-Instrukcje wyboru
-Konstrukcja switch 
-1.4 Instrukcje iteracji
-Pętla while
-Pętla do-while
-Pętla for
-Pętla for-each
-1.5 Instrukcje skoku:
-Instrukcja break
-Instrukcja continue
-Instrukcja return 
-1.6 Klasa
-To konstrukcja logiczna, zbiór metod zmiennych itp. które definiują obiekt. Ważne klasa definiuje nowy typ danych.
-1.7 Obiekt
-To zastosowanie klasy, wystąpienie klasy w praktyce.
-1.8 new
-Operator, który alokuje pamięć do działania obiektu i zwraca referencję do niego.
-1.9 Konstruktor
-metoda o tej samej nazwie co klasa. inicjalizuje obiekt zaraz po jego utworzeniu. Czyli inicjalizuje wszystkie metody i zmienne w klasie.
-1.10 this
-Operator stosuje się w:
-Chaining - chcemy wywołać ze zmiennej obiektowej metody, które mają typ obiektu
-Parametryzacja - odróżnienie zmiennej lokalnej od parametru o tej samej nazwie
-1.11 Metoda przeciążona
-Metoda o tej samej nazwie co istniejąca ale o innej liczbie i typie parametrów. Może zwracać też inny typ wartości. Plus jest taki, że możemy wykorzystywać wielokrotnie tę samą nazwę metody.
-1.12 Metoda rekurencyjna
-Metoda wywołująca samą siebie.
-1.13 static
-Zmienna statyczna - to zmienna globalna współdzielona przez wszystkie obiekty klasy.
-Metoda statyczna - może wywoływać jedynie inne metody statyczne, ma dostęp jedynie do danych statycznych i nie można korzystać z this i super.
-1.14 final
-Zmienne - uniemożliwia modyfikację zmiennej.
-Metody - uniemożliwia przesłanianiu i dziedziczeniu.
-1.15 super (uwaga w C# nie istnieje)
-Można wywołać konstruktor klasy bazowej.
-Można wywołać, uzyskać dostęp do np. metoda klasy nadrzędnej, które zostały przesłonięte przez klasę pochodną.
-1.16 Metoda przesłonięta
-To taka metoda, która ma taką samą nazwę co metoda klasy bazowej. Zostanie ona wykonana. A ta z klasy bazowej ukryta.
-1.17 Klasa abstrakcyjna
-Klasa, która stanowi w pewnym sensie jedynie strukturę dla klas podrzędnych. Dopiero klasy dziedziczące implementują np. metody.
-1.18 Pakiet
-Przestrzeń nazw i sterowanie dostępem. Innymi słowy w pakiecie może istnieć tylko jedna klasa o danej nazwie.
-1.19 Interfejs
-To coś jak klasa abstrakcyjna ale ma jedną dużą zaletę, klasa może implementować dowolną liczbę interfejsów
-1.20 Modyfikatory dostępu
-private - mamy dostęp jedynie w klasie, w której obiekt został zdefiniowany
-brak modyfikatora - mamy dostęp w klasie, w której został obiekt zdefiniowany, w    
-                             podklasach i innych klasach ale dla danego pakietu
-protected - to samo co w przypadku braku modyfikatora + podklasy z innego pakietu
-public - dostępny w klasach i podklasach we wszystkich pakietach
-1.21 Typy wyjątków
-
-1.22 Klauzula try catch
-
-1.23 Garbage Collection
-Jak już wiemy np. każdemu nowemu obiektowi przydzielana jest pamięć. W javie pamięcią i jej zwalnianiem nie zajmuje się programista, ale specjalna funkcja/metoda zwana garbage collector.
-1.24 Kolekcje w Javie
-Lista
-Zbiór
-Mapa
 
 2. REST - podstawy architektury
-2.1 Czym jest REST?
-To zestaw metod i dobrych praktyk definiujących sposób komunikacji między systemami. Może to być np. komunikacja Klient - Serwer. Komunikacja odbywa się przez protokół HTTP. 
+
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Czym jest REST? | To zestaw metod i dobrych praktyk definiujących sposób komunikacji między systemami. Może to być np. komunikacja Klient - Serwer. Komunikacja odbywa się przez protokół HTTP |
+
+2.1 
+ 
 2.2 Czym jest API?
 To samo co powyżej ale ogólnie. Zestaw protokołów, rutyn, narzędzi.
 2.3 Serwer
