@@ -275,95 +275,59 @@ Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele fakt
 | Truncate | Chyba nie zwraca uwagi na klucze. Usuwa jak leci |
 | Delete | Tutaj niestety errory wyskoczą, jak są indeksy i klucze pozakładane |
 
+
 9. Komendy bash
-9.1 cat [filename]
-Pokazuje zawartość pliku.
-9.2 cd /directorypath 
-Przechodzimy pomiędzy katalogami.
-9.3 chmod [options] mode filename
-Zmienia uprawnienia do pliku.
-9.4 chown [options] filename
-Zmienia właściciela pliku.
-9.5 clear
-Czyści konsolę.
-9.6 cp [options] source destination
-Kopiuje plik do katalogu.
-9.7 date [options] 
-Pokazuje lub ustawia datę systemową.
-9.8 df [options] 
-Pokazuje jak zajęty jest dysk twardy.
-9.9 du [options] 
-Pokazuje ile ważą pliki.
-9.10 file [options] filename
-Określa jaki typ danych jest wewnątrz pliku.
-9.11 find [pathname] [expression]
-Znajdź pliki dla danego wzorca.
-9.12 grep [options] pattern [filesname]
-Pokaż pliki dla danego wzorca.
-9.13 kill [options] pid 
-Zatrzymuje proces. kill -9 bezwarunkowo.
-9.14 less [options] [filename] 
-Pokazuje zawartość zawartość pliku strona po stronie.
-9.15 ln [options] source [destination] 
-Miękkie dowiązanie.
-9.16 ls [options] 
-Wylistuj zawartość katalogu.
-9.17 man [command] 
-Pomoc.
-9.18 mkdir [options] directory 
-Stwórz nowy katalog.
-9.19 mv [options] source destination
-Zmień nazwę pliku lub wytnij i wklej go do innej lokalizacji.
-9.20 passwd [name [password]] 
-Zmiana hasła.
-9.21 ps [options] 
-Pokazuje działające procesy.
-9.22 pwd 
-Ścieżka do katalogu, z którego wykonano komendę.
-9.23 rm [options] directory 
-Usuwa pliki lub katalogi.
-9.24 rmdir [options] directory 
-Usuwa katalogi.
-9.25 ssh [options] user@machine
-Zdalne łączenie się z inną linuxową maszyną.
-9.26 su [options] [user [arguments]]
-Przechodzenie pomiędzy użytkownikami.
-9.27 tail [options] [filename] 
-Pokazuje ostatnich 10 linijek pliku.
-9.28 tar [options] filename 
-Pakowanie i rozpakowanie pliku.
-9.29 touch filename 
-Tworzy pusty plik.
-9.30 who [options]
-Pokazuje kto jest zalogowany.
+
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| cat [filename] | Pokazuje zawartość pliku |
+| cd /directorypath  | Przechodzimy pomiędzy katalogami |
+| chmod [options] mode filename | Zmienia uprawnienia do pliku |
+| chown [options] filename | Zmienia właściciela pliku |
+| clear | Czyści konsolę |
+| cp [options] source destination | Kopiuje plik do katalogu |
+| date [options]  | Pokazuje lub ustawia datę systemową |
+| df [options]  | Pokazuje jak zajęty jest dysk twardy |
+| du [options] | Pokazuje ile ważą pliki |
+| file [options] filename | Określa jaki typ danych jest wewnątrz pliku |
+| find [pathname] [expression] | Znajdź pliki dla danego wzorca |
+| grep [options] pattern [filesname] | Pokaż pliki dla danego wzorca |
+| kill [options] pid | Zatrzymuje proces. kill -9 bezwarunkowo |
+| less [options] [filename] | Pokazuje zawartość zawartość pliku strona po stronie |
+| ln [options] source [destination] | Miękkie dowiązanie |
+| ls [options] | Wylistuj zawartość katalogu |
+| man [command] | Pomoc |
+| mkdir [options] directory  | Stwórz nowy katalog |
+| mv [options] source destination | Zmień nazwę pliku lub wytnij i wklej go do innej lokalizacji |
+| passwd [name [password]] | Zmiana hasła |
+| ps [options]  | Pokazuje działające procesy |
+| pwd | Ścieżka do katalogu, z którego wykonano komendę |
+| rm [options] directory  | Usuwa pliki lub katalogi |
+| rmdir [options] directory  | Usuwa katalogi |
+| ssh [options] user@machine | Zdalne łączenie się z inną linuxową maszyną |
+| su [options] [user [arguments]] | Przechodzenie pomiędzy użytkownikami |
+| tail [options] [filename] | Pokazuje ostatnich 10 linijek pliku |
+| tar [options] filename  | Pakowanie i rozpakowanie pliku |
+| touch filename  | Tworzy pusty plik |
+| who [options] | Pokazuje kto jest zalogowany |
+| Union | |
+
 
 10. Agile
-10.1 Zalety agile
-Łatwiejsza reakcja na zmiany, szybciej trwa projekt.
-10.2 Wady agile
-Większy chaos, dużo bugów, zero dokumentacji.
-10.3 Kanban
 
-10.4 Ceremonie Scrumowe
-Planning
-Daily Stand-up
-Review i Retrospective
-Backlog grooming
-Scrum of Scrums
-Poker planning
-10.5 Produkty Scrumowe
-Product backlog - lista high-levelowych wymagań.
-Sprint backlog - lista tasków brana na sprint.
-Burndown-chart - pokazuje progres pracy. Zależność czasu wyestymowanych tasków od czasu w sprincie.
-User Story - historyjka brana na sprinta. Zazwyczaj funkcjonalność.
-10.6 Zespół w Scrumie
-Developer (Dev Team) - wiadomo co robi
-Product Owner - zarządza backlogiem, reprezentuje interesy klienta
-Scrum Master - zarządza procesem i ceremoniami scrumowymi
-10.7 SAFe
-Scaled Agile Framework- Podejście agilowe dla dużych projektów w którym istnieje wiele zespołów scrumowych współpracujących ze sobą.
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Zalety agile | Łatwiejsza reakcja na zmiany, szybciej trwa projekt |
+| Wady agile | Większy chaos, dużo bugów, zero dokumentacji |
+| Kanban |  |
+| Ceremonie Scrumowe | Planning <br/> Daily Stand-up <br/> Review i Retrospective <br/> Backlog grooming <br/> Scrum of Scrums <br/> Poker planning |
+| Produkty Scrumowe | Product backlog - lista high-levelowych wymagań <br/> Sprint backlog - lista tasków brana na sprint <br/> Burndown-chart - pokazuje progres pracy <br/> Zależność czasu wyestymowanych tasków od czasu w sprincie <br/> User Story - historyjka brana na sprinta. Zazwyczaj funkcjonalność |
+| Zespół w Scrumie | Developer (Dev Team) - wiadomo co robi <br/> Product Owner - zarządza backlogiem, reprezentuje interesy klienta <br/> Scrum Master - zarządza procesem i ceremoniami scrumowymi |
+| SAFe | Scaled Agile Framework- Podejście agilowe dla dużych projektów w którym istnieje wiele zespołów scrumowych współpracujących ze sobą |
+
 
 11. Pytania otwarte
+
 11.1 
 Developerzy nie wyrobią się z taskiem w sprincie. Co robię i jak komunikuję to klientowi?
 
