@@ -208,74 +208,41 @@ PROD - nie muszę chyba pisać co to oznacza  |
 
 | Zagadnienie       | Opis    |
 | :------------- |:-------------|
-| Test Strategy |  |
+| ssh | Protokół komunikacyjny, który umożliwia uwierzytelnianie użytkownika w trakcie komunikacji |
+| json array | array of objects - [{},{}] |
+| json object | Np. { name: "name", lastName: "lastName"} |
+| Assert | Kiedy step się wywali egzekucja testu się zatrzymuje |
+| Verify | Kiedy step się wywali egzekucja testu jest kontynuowana |
+| Implicit Wait | Taki globalny wait dla wszystkich elementów. Czekaj aż wyskoczy wyjątek, że nie można znaleźć elementu |
+| Explicit Wait | Taki lokalny dla konkretnego elementu wait |
+| Fluent Wait | Przeznaczony dla elementów, których czas pojawienia się jest bardzo zmienny |
+| Page Object Pattern | Odwzorowanie np. strony webowej pod postacią klasy z metodami odpowiadającymi danej funkcjonalności. Z Takiego obiektu, czyli wystąpienia klasy wywołujemy metody |
+| Page Object Model | Rozwinięcie albo dodatek do Page object pattern. Stworzona po to by nie powielać kodu i składować i inicjalizować web elementy w jednym miejscu. Najprościej jest utworzyć klasę z web elementami i zainicjalizować je (wyszukać). W ten sposób nie musimy w przypadku zmiany lokatora w wielu miejscach go zmieniać. Oszczędzamy czas i miejsce |
+| Page Factory | Możemy sobie sami stworzyć taki model, ale po co jak Selenium WebDriver ma to już stworzone i zoptymalizowane. Nazywa się to Page Factory |
+| BDD w praktyce | BDD binding in C# and Java - [Binding] and @Binding. <br/>
+Przykłady frameworków: <br/>
+Specflow - BDD dla C# używa atrybutów [] <br/>
+JBhave - BDD dla Javy używa annotacji <br/>
+Cucumber -  BDD dla Javy używa annotacji i co ważne sklejanie stepów z featurami używacie poprzez słówko kluczowe “glue” w klasie z runner’em testów. <br/>
+Jasmine - BDD dla JS |
+| TestNG | Framework javowy do unit testów i funkcjonalnych. Najczęściej stosowany w połączeniu z selenium.
+Annotacje TestNG: @Test, @BeforeClass, @AfterClass, @BeforeSuite, @AfterSuite, @BeforeMethod, @AfterMethod |
+| Locators | Można generalnie podzielić na dwie grupy: związane z DOM (xpath, id, name) i CSS |
+| Aplikacje Mobilne | Native - instalowane na mobilkach z takich źródeł jak GooglePlay. Są dedykowane konkretnym urządzeniom. Mogą używać funkcjonalności telefonu np. Kamery <br/>
+Hybrid - Są dostępne np. z GooglePlay ale odpalane przeglądarkowo <br/>
+Web - apki odpalane przez przeglądarkę, zazwyczaj napisane w HTML5 |
+| Testowanie mobilek | Narzędzia do testowania automatycznego urządzeń mobilnych: appium, robotium, espresso. W przypadku webowych można używać emulatorów selenium webdriver na aplikacje mobilne |
+| Event Listenery | Zestaw metod, które umożliwiają logowanie akcji ale jedynie tych związanych z webdriverem |
+| Regexp | Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu |
+| Programowanie niskopoziomowe | Programowanie niskiego poziomu to język zrozumiały dla peceta [język maszynowy (kod binarny)] np. assambler |
+| Programowanie wysokopoziomowe | Programowanie wysokiego poziomu to programowanie zrozumiałe dla ludzi np. java. |
+| Cache | Pamięć podręczna. Jest wykorzystywana do szybszego dostępu do danych.
+Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załadowane ponownie nie muszą być ładowane po prostu są pobierane z pamięci podręcznej |
+| Protractor | Framework jsowy dedykowany dla angularJS, służący do testów funkcjonalnych. Działa na selenium webdriverze |
+| Środowisko uruchomieniowe | W językach wysokopoziomowych potrzebny jest specjalny interpreter, który przetłumaczy kod na postać binarną zrozumiałą dla maszyny. Przykładami są node.js i jre. |
+| Package Manager | Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu |
+| Regexp | System do automatycznej instalacji, konfiguracji, aktualizacji i usuwania pakietów oprogramowania |
 
-7.1 ssh
-Protokół komunikacyjny, który umożliwia uwierzytelnianie użytkownika w trakcie komunikacji.
-7.2 json array
-array of objects - [{},{}]
-7.3 json object
-Np. { name: "name", lastName: "lastName"}
-7.4 Assert
-Kiedy step się wywali egzekucja testu się zatrzymuje.
-7.5 Verify
-Kiedy step się wywali egzekucja testu jest kontynuowana.
-7.6 Implicit Wait
-Taki globalny wait dla wszystkich elementów. Czekaj aż wyskoczy wyjątek, że nie można znaleźć elementu.
-7.7 Explicit Wait
-Taki lokalny dla konkretnego elementu wait.
-7.7 Fluent Wait
-Przeznaczony dla elementów, których czas pojawienia się jest bardzo zmienny.
-7.8 Page Object Pattern
-Odwzorowanie np. strony webowej pod postacią klasy z metodami odpowiadającymi danej funkcjonalności. Z Takiego obiektu, czyli wystąpienia klasy wywołujemy metody.
-7.9 Page Object Model
-Rozwinięcie albo dodatek do Page object pattern. Stworzona po to by nie powielać kodu i składować i inicjalizować web elementy w jednym miejscu.
-Najprościej jest utworzyć klasę z web elementami i zainicjalizować je (wyszukać). W ten sposób nie musimy w przypadku zmiany lokatora w wielu miejscach go zmieniać.
-Oszczędzamy czas i miejsce. 
-7.10 Page Factory
-Możemy sobie sami stworzyć taki model, ale po co jak Selenium WebDriver ma to już stworzone i zoptymalizowane. Nazywa się to Page Factory.
-7.11 BDD w praktyce
-BDD binding in C# and Java - [Binding] and @Binding.
-Przykłady frameworków:
-Specflow - BDD dla C# używa atrybutów []
-
-JBhave - BDD dla Javy używa annotacji
-
-Cucumber -  BDD dla Javy używa annotacji i co ważne sklejanie stepów z featurami używacie poprzez słówko kluczowe “glue” w klasie z runner’em testów.
-
-Jasmine - BDD dla JS
-7.12 TestNG
-Framework javowy do unit testów i funkcjonalnych. Najczęściej stosowany w połączeniu z selenium.
-Annotacje TestNG: @Test, @BeforeClass, @AfterClass, @BeforeSuite, @AfterSuite, @BeforeMethod, @AfterMethod
-7.13 Locators
-Można generalnie podzielić na dwie grupy: związane z DOM (xpath, id, name) i CSS
-7.14 Aplikacje Mobilne
-Native - instalowane na mobilkach z takich źródeł jak GooglePlay. Są dedykowane konkretnym urządzeniom. Mogą używać funkcjonalności telefonu np. Kamery
-
-Hybrid - Są dostępne np. z GooglePlay ale odpalane przeglądarkowo 
-
-Web - apki odpalane przez przeglądarkę, zazwyczaj napisane w HTML5
-7.15 Testowanie mobilek
-Narzędzia do testowania automatycznego urządzeń mobilnych: appium, robotium, espresso. W przypadku webowych można używać emulatorów selenium webdriver na aplikacje mobilne.
-7.16 Event Listenery
-Zestaw metod, które umożliwiają logowanie akcji ale jedynie tych związanych z webdriverem.
-7.17 Regexp
-Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu.
-7.18 Programowanie niskopoziomowe
-Programowanie niskiego poziomu to język zrozumiały dla peceta [język maszynowy (kod binarny)] np. assambler.
-7.19 Programowanie wysokopoziomowe
-Programowanie wysokiego poziomu to programowanie zrozumiałe dla ludzi np. java.
-7.20 Cache
-Pamięć podręczna. Jest wykorzystywana do szybszego dostępu do danych.
-Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załadowane ponownie nie muszą być ładowane po prostu są pobierane z pamięci podręcznej.
-7.21 Protractor
-Framework jsowy dedykowany dla angularJS, służący do testów funkcjonalnych. Działa na selenium webdriverze.
-7.22 Środowisko uruchomieniowe
-W językach wysokopoziomowych potrzebny jest specjalny interpreter, który przetłumaczy kod na postać binarną zrozumiałą dla maszyny. Przykładami są node.js i jre.
-7.23 Package Manager
-System do automatycznej instalacji, konfiguracji, aktualizacji i usuwania pakietów oprogramowania.
-7.24 Geckodriver
-Driver dla firefoxa w selenium 3.0 +
 
 8. SQL
 8.1 Union
