@@ -245,66 +245,35 @@ Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załad
 
 
 8. SQL
-8.1 Union
-Łączenie tabel o tej samej liczbie kolumn i typie. Usuwa duplikaty. 
-8.2 Union ALL
-Łączenie tabel o tej samej liczbie kolumn i typie. Nie usuwa duplikatów.
-8.3 Joins
-left join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "lewej" tabeli.
 
-right join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "prawej" tabeli.
-
-inner join - pokazuje część wspólną tabel.
-
-outer join - pokazuje część wspólną i nie wspólną tabel.
-
-cross join - łączy każdy element z tabeli 1 z każdym elementem z tabeli 2.
-8.4 Agregacje w SQL
-AVG, SUM, MAX, MIN
-8.5 EXCEPT
-(SQL Server) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych.
-8.6 MINUS
-(Oracle) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych.
-8.7 Count
-Count(*) - zlicza ilość rekordów po wszystkich kolumnach
-Count(1) - zlicza ilość rekordów po pierwszej kolumnie
-8.8 Hurtownia danych
-Baza skonstruowana z innych baz relacyjnych celem szybszego dostępu do danych. 
-Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele faktów.
-8.9 Dynamiczny SQL
-Czyli jak przechowywać zapytania w zmiennej, odpalać je z dowolnego miejsca kodu i przechowywać zwróconą wartość w innej zmiennej. Ma słabą wydajność.
-Oracle - Execute Immediate
-SQL Server - exec sp_executesql
-8.10 SQL hints
-W SQL Server możemy dopomóc przy egzekucji zapytania pewnymi hintami celem przyspieszenia działania zapytania.
-join hints - merge, loop, hash
-table hints - NO LOCK
-8.11 Pivot
-Obracanie tabeli.
-8.12 Tabela CTE
-Common table expression - służąca chociażby do insertowania w jednym zapytaniu dużej ilości rekordów.  
-8.13 Klucze
-Primary key
-Foreign key
-8.14 Constraints
-Określają ograniczenia kolumn: not null, unique, primary key, foreign key, index.
-8.15 Grupowanie
-Grupowanie należy wykonywać po niezagregowanych kolumnach.
-8.16 Transakcje
-Insert, update, delete. 
-8.17 Indeksy 
-Klastrone
-Nieklastrowe
-8.18 Konwertowanie danych
-Convert - więcej możemy zrobić z datą niż w przypadku cast
-Cast - jest standardem ANSI
-8.19 Trimming
-ltrim - wycina spację z lewej strony
-rtrim - wycina spację z prawej strony
-8.20 Truncate
-Chyba nie zwraca uwagi na klucze. Usuwa jak leci.
-8.21 Delete
-Tutaj niestety errory wyskoczą, jak są indeksy i klucze pozakładane.
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Union | Łączenie tabel o tej samej liczbie kolumn i typie. Usuwa duplikaty |
+| Union ALL | Łączenie tabel o tej samej liczbie kolumn i typie. Nie usuwa duplikatów |
+| Joins | left join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "lewej" tabeli <br/>
+right join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "prawej" tabeli <br/>
+inner join - pokazuje część wspólną tabel <br/>
+outer join - pokazuje część wspólną i nie wspólną tabel <br/>
+cross join - łączy każdy element z tabeli 1 z każdym elementem z tabeli 2|
+| Agregacje w SQL | AVG, SUM, MAX, MIN |
+| EXCEPT | (SQL Server) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
+| MINUS | (Oracle) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
+| Count | Count(*) - zlicza ilość rekordów po wszystkich kolumnach <br/> Count(1) - zlicza ilość rekordów po pierwszej kolumnie |
+| Hurtownia danych | Baza skonstruowana z innych baz relacyjnych celem szybszego dostępu do danych <br/>
+Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele faktów.|
+| Dynamiczny SQL | Czyli jak przechowywać zapytania w zmiennej, odpalać je z dowolnego miejsca kodu i przechowywać zwróconą wartość w innej zmiennej. Ma słabą wydajność. Oracle - Execute Immediate, SQL Server - exec sp_executesql |
+| SQL hints | W SQL Server możemy dopomóc przy egzekucji zapytania pewnymi hintami celem przyspieszenia działania zapytania. join hints - merge, loop, hash table hints - NO LOCK|
+| Pivot | Obracanie tabeli |
+| Tabela CTE | Common table expression - służąca chociażby do insertowania w jednym zapytaniu dużej ilości rekordów |
+| Klucze | Primary key <br/> Foreign key |
+| Constraints | Określają ograniczenia kolumn: not null, unique, primary key, foreign key, index |
+| Grupowanie | Grupowanie należy wykonywać po niezagregowanych kolumnach |
+| Transakcje | Insert, update, delete |
+| Indeksy | Klastrone <br/> Nieklastrowe |
+| Konwertowanie danych | Convert - więcej możemy zrobić z datą niż w przypadku cast <br/> Cast - jest standardem ANSI |
+| Trimming | ltrim - wycina spację z lewej strony <br/ >rtrim - wycina spację z prawej strony |
+| Truncate | Chyba nie zwraca uwagi na klucze. Usuwa jak leci |
+| Delete | Tutaj niestety errory wyskoczą, jak są indeksy i klucze pozakładane |
 
 9. Komendy bash
 9.1 cat [filename]
