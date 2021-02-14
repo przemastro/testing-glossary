@@ -38,114 +38,64 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Zagadnienie       | Opis    |
 | :------------- |:-------------|
 | Czym jest REST? | To zestaw metod i dobrych praktyk definiujących sposób komunikacji między systemami. Może to być np. komunikacja Klient - Serwer. Komunikacja odbywa się przez protokół HTTP |
+| Czym jest API? | To samo co powyżej ale ogólnie. Zestaw protokołów, rutyn, narzędzi |
+| Serwer | Utożsamiany z backendem program, który świadczy usługi dla innych programów. Komunikuje się z bazą i klientem |
+| Klient | Program komputerowy występujący w roli klienta usług dostarczanych przez serwer |
+| Po co REST API? | Ustandaryzowanie zasad tak by każdy ze swoją technologią mógł się komunikować z "obcą" technologią potencjalnie niekompatybilną |
+| Metody HTTP | GET - request danych ze źródła <br/> POST - update danych w źródle <br/> PUT - zapisanie danych w źródle <br/> DELETE - usunięcie danych  <br/> OPTIONS <br/> HEAD |
+| Najważniejsze Statusy Odpowiedzi | 200 - OK <br/> 201 - Created <br/> 500 - Internal Server Error <br/> 400 - Bad request <br/> 401 - Unauthorized <br/> 404 - Not found |
+| Co testować? | Backend validation - walidacja pól <br/> Uwierzytelnianie - czy endpointy są zabezpieczone przed nieporządanym dostępem |
+| CORS requests | Mechanizm umożliwiający współdzielenie zasobów pomiędzy serwerem i klientem znajdującymi się w różnych domenach, czyli wykonywania żądań AJAXowych przy zachowaniu pewnych ograniczeń co do dopuszczalnego źródła danych |
+| Headers | Nagłówki to pewnego rodzaju polecenia służące do komunikacji między serwerem a klientem np. Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Allow-Methods |
 
-2.1 
- 
-2.2 Czym jest API?
-To samo co powyżej ale ogólnie. Zestaw protokołów, rutyn, narzędzi.
-2.3 Serwer
-Utożsamiany z backendem program, który świadczy usługi dla innych programów. Komunikuje się z bazą i klientem.
-2.4 Klient
-Program komputerowy występujący w roli klienta usług dostarczanych przez serwer.
-2.5 Po co REST API?
-Ustandaryzowanie zasad tak by każdy ze swoją technologią mógł się komunikować z "obcą" technologią potencjalnie niekompatybilną.
-2.6 Metody HTTP
-GET - request danych ze źródła
-POST - update danych w źródle
-PUT - zapisanie danych w źródle
-DELETE - usunięcie danych  
-OPTIONS
-HEAD
-2.7 Statusy
-200 - OK
-201 - Created
-500 - Internal Server Error
-400 - Bad request
-401 - Unauthorized
-404 - Not found
-2.8 Co testować?
-Backend validation - walidacja pól
-Uwierzytelnianie - czy endpointy są zabezpieczone przed nieporządanym dostępem
-2.9 CORS requests
-Mechanizm umożliwiający współdzielenie zasobów pomiędzy serwerem i klientem znajdującymi się w różnych domenach, czyli wykonywania żądań AJAXowych przy zachowaniu pewnych ograniczeń co do dopuszczalnego źródła danych. 
-2.10 Headers
-Nagłówki to pewnego rodzaju polecenia służące do komunikacji między serwerem a klientem np.  
-                       Access-Control-Allow-Headers
-                       Access-Control-Allow-Origin
-                       Access-Control-Allow-Methods
 
 3. Technologie i frameworki developerskie
-3.1 Maven
-Build Manager (java)
-3.2 Gradle
-Build Manager (java)
-3.3 npm
-Package Manager (js)
-3.4 gulp
-Build Manager (js)
-3.5 NuGet
-Package Manager (C#)
-3.6 Proxy
-Serwer pośredniczący w przekazywaniu danych w sieci komputerowej z wykorzystaniem jakiegoś protokołu np. HTTP.
-3.7 curl
-Programik do transferowania danych różnymi protokołami np. HTTP.
-3.8 SSIS
-Paczka ETL-owa w SQL Server pozwalająca na wyciąganie danych, konwertowanie, procesowanie i załadowanie do bazy.
-3.9 Tomcat
-Serwer aplikacyjny.
-3.10 Hibernate
-Framework pod Javę do mapowania obiektów relacyjnej bazy danych.
-3.11 Spring
-Framework javowy.
-3.12 NoSQL
-Nierelacyjna baza danych. Np. MongoDB.
-3.13 Ajax
-Technologia wspierająca dynamiczne zmiany elementów na stronie bez konieczności  przeładowywania strony. Na technikę składa się xml, javascript, XMLHttpRequest.
-3.14 Flask
-Framework pythonowy.
-3.15 Angularjs
-Js framework. Najważniejszymi składowymi aplikacji angularowej są:
-Routing         - zarządza przekierowaniami
-Controller      - pośrednik między kodem HTML a serwisem
-Directive       - zestaw funkcji do wykonania. ng-repeat, ng-show lub customowe
-Service         - serwis służy do komunikacji z backendem
-Scope           - odwzorowanie HTML'a na js?
-3.16 JDBC
-API pod Javę określające sposób komunikacji Backend-DB. Inne np. ODBC dla C#.
-3.17 XMLHttpRequest 
-Asynchroniczne przesyłanie danych dzięki czemu w trakcie pobierania danych użytkownik może wykonywać inne czynności.
-3.18 node.js
-Środowisko uruchomieniowe dla JS.
-3.19 JRE
-Środowisko uruchomieniowe dla Javy
-3.20 JDK
-Środowisko do programowania w Javie. Zawiera kompilatory Javy, wirtualne maszyny itd.
-3.21 JQuery
-Biblioteka JS-owa.
-3.22 TypeScript
-Microsoftowy język obiektowy.
-3.23 Ant
-Build Manager (java)
+
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Maven | Build Manager (java) |
+| Gradle | Build Manager (java) |
+| npm | Package Manager (js) |
+| gulp | Build Manager (js) |
+| NuGet | Package Manager (C#) |
+| Proxy | Serwer pośredniczący w przekazywaniu danych w sieci komputerowej z wykorzystaniem jakiegoś protokołu np. HTTP |
+| curl | Programik do transferowania danych różnymi protokołami np. HTTP |
+| SSIS | Paczka ETL-owa w SQL Server pozwalająca na wyciąganie danych, konwertowanie, procesowanie i załadowanie do bazy |
+| Tomcat | Serwer aplikacyjny |
+| Hibernate | Framework pod Javę do mapowania obiektów relacyjnej bazy danych |
+| Spring | Framework javowy |
+| NoSQL | Nierelacyjna baza danych. Np. MongoDB |
+| Ajax | Technologia wspierająca dynamiczne zmiany elementów na stronie bez konieczności  przeładowywania strony. Na technikę składa się xml, javascript, XMLHttpRequest |
+| Flask | Framework pythonowy |
+| Angularjs | Js framework. Najważniejszymi składowymi aplikacji angularowej są: <br/>
+Routing         - zarządza przekierowaniami <br/>
+Controller      - pośrednik między kodem HTML a serwisem <br/>
+Directive       - zestaw funkcji do wykonania. ng-repeat, ng-show lub customowe <br/>
+Service         - serwis służy do komunikacji z backendem <br/>
+Scope           - odwzorowanie HTML'a na js? |
+| JDBC | API pod Javę określające sposób komunikacji Backend-DB. Inne np. ODBC dla C# |
+| XMLHttpRequest | Asynchroniczne przesyłanie danych dzięki czemu w trakcie pobierania danych użytkownik może wykonywać inne czynności |
+| node.js | Środowisko uruchomieniowe dla JS |
+| JRE | Środowisko uruchomieniowe dla Javy |
+| JDK | Środowisko do programowania w Javie. Zawiera kompilatory Javy, wirtualne maszyny itd |
+| JQuery | Biblioteka JS-owa |
+| Ant | Build Manager (java) |
+
 
 4. Continuous Integration - kroki i proces
-4.1 Po co?
-Szybka możliwość weryfikacja i przetestowanie zmian wrzucanych na środowisko połączona z integracją z innymi systemami oraz możliwość zaprezentowania na demo.
-4.2 Konfiguracja
-Określenie nazwy builda i build countera 
 
-Zintegrowanie joba ze zdalnym repozytorium
- 
-Określenie build stepów i gdzie powinny się odpalać
- 
-Określenie triggerów
+| Zagadnienie       | Opis    |
+| :------------- |:-------------|
+| Po co? | Szybka możliwość weryfikacja i przetestowanie zmian wrzucanych na środowisko połączona z integracją z innymi systemami oraz możliwość zaprezentowania na demo |
+| Konfiguracja | Określenie nazwy builda i build countera <br/>
+Zintegrowanie joba ze zdalnym repozytorium <br/>
+Określenie build stepów i gdzie powinny się odpalać <br/> 
+Określenie triggerów <br/>
+Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parametry jak odpalanie dodatkowych skryptów po buildzie. |
+| Night build | Zazwyczaj pełna lista testów jest odpalana. Job zaskedżulowany |
+| Daily build | Przetestowanie korowych funkcjonalności po każdym komicie |
+| Narzędzia CI | Jenkins, TeamCity, CruiseControl, Bamboo, Firebase, Bitrise |
 
-Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parametry jak odpalanie dodatkowych skryptów po buildzie.
-4.3 Night build
-Zazwyczaj pełna lista testów jest odpalana. Job zaskedżulowany.
-4.4 Daily build
-Przetestowanie korowych funkcjonalności po każdym komicie.
-4.5 Narzędzia CI
-Jenkins, TeamCity, CruiseControl, Bamboo
 
 5. GIT komendy i VCS
 5.1 Narzędzia VCS
