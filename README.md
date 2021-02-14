@@ -67,12 +67,7 @@ Nie za krótkie wprowadzenie do technicznych testów
 | NoSQL | Nierelacyjna baza danych. Np. MongoDB |
 | Ajax | Technologia wspierająca dynamiczne zmiany elementów na stronie bez konieczności  przeładowywania strony. Na technikę składa się xml, javascript, XMLHttpRequest |
 | Flask | Framework pythonowy |
-| Angularjs | Js framework. Najważniejszymi składowymi aplikacji angularowej są: <br/>
-Routing         - zarządza przekierowaniami <br/>
-Controller      - pośrednik między kodem HTML a serwisem <br/>
-Directive       - zestaw funkcji do wykonania. ng-repeat, ng-show lub customowe <br/>
-Service         - serwis służy do komunikacji z backendem <br/>
-Scope           - odwzorowanie HTML'a na js? |
+| Angularjs | Js framework. Najważniejszymi składowymi aplikacji angularowej są: <br/> Routing - zarządza przekierowaniami <br/> Controller - pośrednik między kodem HTML a serwisem <br/> Directive - zestaw funkcji do wykonania. ng-repeat, ng-show lub customowe <br/> Service - serwis służy do komunikacji z backendem <br/> Scope - odwzorowanie HTML'a na js? |
 | JDBC | API pod Javę określające sposób komunikacji Backend-DB. Inne np. ODBC dla C# |
 | XMLHttpRequest | Asynchroniczne przesyłanie danych dzięki czemu w trakcie pobierania danych użytkownik może wykonywać inne czynności |
 | node.js | Środowisko uruchomieniowe dla JS |
@@ -87,11 +82,7 @@ Scope           - odwzorowanie HTML'a na js? |
 | Zagadnienie       | Opis    |
 | :------------- |:-------------|
 | Po co? | Szybka możliwość weryfikacja i przetestowanie zmian wrzucanych na środowisko połączona z integracją z innymi systemami oraz możliwość zaprezentowania na demo |
-| Konfiguracja | Określenie nazwy builda i build countera <br/>
-Zintegrowanie joba ze zdalnym repozytorium <br/>
-Określenie build stepów i gdzie powinny się odpalać <br/> 
-Określenie triggerów <br/>
-Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parametry jak odpalanie dodatkowych skryptów po buildzie. |
+| Konfiguracja | Określenie nazwy builda i build countera <br/> Zintegrowanie joba ze zdalnym repozytorium <br/> Określenie build stepów i gdzie powinny się odpalać <br/> Określenie triggerów <br/> Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parametry jak odpalanie dodatkowych skryptów po buildzie. |
 | Night build | Zazwyczaj pełna lista testów jest odpalana. Job zaskedżulowany |
 | Daily build | Przetestowanie korowych funkcjonalności po każdym komicie |
 | Narzędzia CI | Jenkins, TeamCity, CruiseControl, Bamboo, Firebase, Bitrise |
@@ -144,39 +135,22 @@ Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parame
 | Waterfall | Każdy krok rozwoju aplikacji następuje po sobie. Wady dłużej trwa projekt, ciężko o wprowadzanie zmian. Zalety: bardziej uporządkowany, istnieje dokumentacja |
 | Cykl życia defektu | Report, assign, fix, resolve, test, approve or reject and assign, close |
 | Raportowanie defektu | Title, environment, sometimes sprint number, steps to reproduce, expected result ,actual result, screenshot |
-| Techniki testowe | Klasy równoważności - zbiór danych, których wykorzystanie powoduje takie samo działanie systemu <br/>
-Wartości graniczne - specjalny przypadek klas równoważności, badamy wartości na granicy danych zbiorów i tuż poza <br/>
-Przejścia pomiędzy stanami - przypadki testowe projektowane tak by sprawdzały dozwolone i niedozwolone przejścia między stanami <br/>
-Tablica decyzyjna |
+| Techniki testowe | Klasy równoważności - zbiór danych, których wykorzystanie powoduje takie samo działanie systemu <br/> Wartości graniczne - specjalny przypadek klas równoważności, badamy wartości na granicy danych zbiorów i tuż poza <br/> Przejścia pomiędzy stanami - przypadki testowe projektowane tak by sprawdzały dozwolone i niedozwolone przejścia między stanami <br/> Tablica decyzyjna |
 | Smoke Testy | Testy korowych funkcjonalności |
 | Testy Regresyjne | Przeprowadzane po smoke testach, weryfikują czy system się nie popsuł po dokonaniu zmian, wprowadzeniu nowych funkcjonalności, poprawieniu błędów |
-| Co automatyzować | Korowe funkcjonalności (wykorzystywane w wielu miejscach) <br/>
-Testy odpalane wielokrotnie (regresyjne, smoke testy) <br/>
-Testy z dużą ilością danych testowych <br/>
-Testy odpalane na wielu przeglądarkach <br/>
-Funkcjonalności, które mają tendencję do psucia się |
+| Co automatyzować | Korowe funkcjonalności (wykorzystywane w wielu miejscach) <br/> Testy odpalane wielokrotnie (regresyjne, smoke testy) <br/> Testy z dużą ilością danych testowych <br/> Testy odpalane na wielu przeglądarkach <br/> Funkcjonalności, które mają tendencję do psucia się |
 | White box testing | Unit testing, zaglądamy co tam w bebechach piszczy. Weryfikujemy działanie metod, klas, procedur, tabel itd |
 | Black box testing | Bez zaglądania w kod. Testujemy w oparciu o techniki testowe |
 | Ad Hoc testing | Bez przygotowania, bazujemy jedynie na własnym doświadczeniu |
 | Exploratory testing  | Bazujemy na własnym doświadczeniu. Przygotowujemy się do tego. Może być odrobina dokumentacji |
-| Sesja eksploracyjna | Session based testing (2-3 sessions) each session 30-45 minutes. <br/>
-The session metrics are the primary means to express the status of the exploratory test process. They contain the following elements:<br/>
-Number of sessions completed <br/>
-Number of problems found <br/>
-Function areas covered <br/>
-Percentage of session time spent setting up for testing <br/>
-Percentage of session time spent testing <br/>
-Percentage of session time spent investigating problems |
+| Sesja eksploracyjna | Session based testing (2-3 sessions) each session 30-45 minutes. <br/> The session metrics are the primary means to express the status of the exploratory test process. They contain the following elements: <br/> Number of sessions completed <br/> Number of problems found <br/> Function areas covered <br/> Percentage of session time spent setting up for testing <br/> Percentage of session time spent testing <br/> Percentage of session time spent investigating problems |
 | TDD | Koncepcja developmentu, w którym wpierw piszemy test pod funkcjonalność, piszemy funkcjonalność, jeśli failuje to poprawiamy funkcjonalność i raz jeszcze odpalamy test |
 | BDD | Rozwinięcie koncepcji TDD o dodatkową warstwę przedstawiającą testy w języku naturalnym, zrozumiałym dla biznesu |
 | Testing | Sprawdzenie czy wymagania zostały zaimplementowane poprawnie |
 | QA | Szersze pojęcie niż testing. Testing jest składową QA, ale QA dba również o odczucia klienta np. estetyka, innowacyjność a także czy jakieś standardy zostały zachowane |
 | Waga | Jak ważny bug jest dla biznesu |
 | Priorytet | Jak szybko buga rozwiązać |
-| Poziomy testowania | Modułowe(jednostkowe) <br/>
-Integracyjne <br/>
-Systemowe <br/>
-Akceptacyjne |
+| Poziomy testowania | Modułowe(jednostkowe) <br/> Integracyjne <br/> Systemowe <br/> Akceptacyjne |
 | Analiza Statyczna | Testowanie  modułu lub systemu na etapie pisania specyfikacji i projektowania bez uruchamiania kodu |
 | Analiza dynamiczna | Tu uruchamiamy kod i przeglądamy ręcznie kod |
 | Model Wodospadowy | W tym modelu każda faza rozwoju oprogramowania następuje po sobie: Zbieranie Wymagań -> Projektowanie -> Development -> Testing -> Utrzymanie|
@@ -188,20 +162,14 @@ Akceptacyjne |
 | Sesja usability | Testy z użytkownikami. Badamy jak długo czasu spędzał na stronie, jakie są odczucia odnośnie aplikacji, czas potrzebny na wykonanie jakiegoś zadania |
 | Testy bezpieczeństwa | Np. sql injection, cross site scripting |
 | Piramida testów | W pewnym sensie usystematyzowanie ilościowe testów. Piramida zakłada, że najwięcej odpalamy unit testów, dalej testów funkcjonalnych i akceptacyjnych. Najmniej E2E |
-| UML | Modelowanie obiektowe. Przykładowe diagramy: <br/>
-Activity <br/>
-Use cases <br/>
-Classes |
+| UML | Modelowanie obiektowe. Przykładowe diagramy: <br/> Activity <br/> Use cases <br/> Classes |
 | WSDL | (Web Services Description Language) - informacje odnośnie web-serwisu- akceptowane typy danych, port działania, operacje, informacje o end-pointach |
 | PairWise Testing | Czarnoskrzynkowa technika projektowania przypadków testowych, której celem jest redukcja ilości przypadków testowych w celu szybszego ukończenia testowania. Dobre zastosowanie tej techniki nie powinno obniżać pokrycia |
 | Jarzmo testowe | Środowisko testowe, składające się z zaślepek i sterowników potrzebnych do wykonania testu |
 | Hot-Fix | Poprawka wprowadzona do aplikacji będącej już na produkcji bez nowego releasu całej aplikacji. Poprawka jest wpierw testowana na środowisku akceptacyjnym będącym kopią produkcji |
 | Change Request | Prośba ze strony biznesu o wprowadzenie zmian do funkcjonalności aplikacji będącej na produkcji |
 | Środowiska | Rozwinięcie koncepcji TDD o dodatkową warstwę przedstawiającą testy w języku naturalnym, zrozumiałym dla biznesu |
-| BDD | DEV - zazwyczaj lokalnie u developera ale też często współdzielone przez innych developerów. <br/>
-TEST - dedykowane testerom do testów automatycznych i manualnych <br/>
-UAT - środowisko przeznaczone dla klienta do testów akceptacyjnych <br/>
-PROD - nie muszę chyba pisać co to oznacza  |
+| BDD | DEV - zazwyczaj lokalnie u developera ale też często współdzielone przez innych developerów. <br/> TEST - dedykowane testerom do testów automatycznych i manualnych <br/> UAT - środowisko przeznaczone dla klienta do testów akceptacyjnych <br/> PROD - nie muszę chyba pisać co to oznacza  |
 
 
 7. Trochę o automatyzacji i technicznych spraw ciąg dalszy
