@@ -168,8 +168,7 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Jarzmo testowe | Środowisko testowe, składające się z zaślepek i sterowników potrzebnych do wykonania testu |
 | Hot-Fix | Poprawka wprowadzona do aplikacji będącej już na produkcji bez nowego releasu całej aplikacji. Poprawka jest wpierw testowana na środowisku akceptacyjnym będącym kopią produkcji |
 | Change Request | Prośba ze strony biznesu o wprowadzenie zmian do funkcjonalności aplikacji będącej na produkcji |
-| Środowiska | Rozwinięcie koncepcji TDD o dodatkową warstwę przedstawiającą testy w języku naturalnym, zrozumiałym dla biznesu |
-| BDD | DEV - zazwyczaj lokalnie u developera ale też często współdzielone przez innych developerów. <br/> TEST - dedykowane testerom do testów automatycznych i manualnych <br/> UAT - środowisko przeznaczone dla klienta do testów akceptacyjnych <br/> PROD - nie muszę chyba pisać co to oznacza  |
+| Środowiska | DEV - zazwyczaj lokalnie u developera ale też często współdzielone przez innych developerów. <br/> TEST - dedykowane testerom do testów automatycznych i manualnych <br/> UAT - środowisko przeznaczone dla klienta do testów akceptacyjnych <br/> PROD - nie muszę chyba pisać co to oznacza  |
 
 
 7. Trochę o automatyzacji i technicznych spraw ciąg dalszy
@@ -187,25 +186,16 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Page Object Pattern | Odwzorowanie np. strony webowej pod postacią klasy z metodami odpowiadającymi danej funkcjonalności. Z Takiego obiektu, czyli wystąpienia klasy wywołujemy metody |
 | Page Object Model | Rozwinięcie albo dodatek do Page object pattern. Stworzona po to by nie powielać kodu i składować i inicjalizować web elementy w jednym miejscu. Najprościej jest utworzyć klasę z web elementami i zainicjalizować je (wyszukać). W ten sposób nie musimy w przypadku zmiany lokatora w wielu miejscach go zmieniać. Oszczędzamy czas i miejsce |
 | Page Factory | Możemy sobie sami stworzyć taki model, ale po co jak Selenium WebDriver ma to już stworzone i zoptymalizowane. Nazywa się to Page Factory |
-| BDD w praktyce | BDD binding in C# and Java - [Binding] and @Binding. <br/>
-Przykłady frameworków: <br/>
-Specflow - BDD dla C# używa atrybutów [] <br/>
-JBhave - BDD dla Javy używa annotacji <br/>
-Cucumber -  BDD dla Javy używa annotacji i co ważne sklejanie stepów z featurami używacie poprzez słówko kluczowe “glue” w klasie z runner’em testów. <br/>
-Jasmine - BDD dla JS |
-| TestNG | Framework javowy do unit testów i funkcjonalnych. Najczęściej stosowany w połączeniu z selenium.
-Annotacje TestNG: @Test, @BeforeClass, @AfterClass, @BeforeSuite, @AfterSuite, @BeforeMethod, @AfterMethod |
+| BDD w praktyce | BDD binding in C# and Java - [Binding] and @Binding. <br/> Przykłady frameworków: <br/> Specflow - BDD dla C# używa atrybutów [] <br/> JBhave - BDD dla Javy używa annotacji <br/> Cucumber -  BDD dla Javy używa annotacji i co ważne sklejanie stepów z featurami używacie poprzez słówko kluczowe “glue” w klasie z runner’em testów. <br/> Jasmine - BDD dla JS |
+| TestNG | Framework javowy do unit testów i funkcjonalnych. Najczęściej stosowany w połączeniu z selenium. Annotacje TestNG: @Test, @BeforeClass, @AfterClass, @BeforeSuite, @AfterSuite, @BeforeMethod, @AfterMethod |
 | Locators | Można generalnie podzielić na dwie grupy: związane z DOM (xpath, id, name) i CSS |
-| Aplikacje Mobilne | Native - instalowane na mobilkach z takich źródeł jak GooglePlay. Są dedykowane konkretnym urządzeniom. Mogą używać funkcjonalności telefonu np. Kamery <br/>
-Hybrid - Są dostępne np. z GooglePlay ale odpalane przeglądarkowo <br/>
-Web - apki odpalane przez przeglądarkę, zazwyczaj napisane w HTML5 |
+| Aplikacje Mobilne | Native - instalowane na mobilkach z takich źródeł jak GooglePlay. Są dedykowane konkretnym urządzeniom. Mogą używać funkcjonalności telefonu np. Kamery <br/> Hybrid - Są dostępne np. z GooglePlay ale odpalane przeglądarkowo <br/> Web - apki odpalane przez przeglądarkę, zazwyczaj napisane w HTML5 |
 | Testowanie mobilek | Narzędzia do testowania automatycznego urządzeń mobilnych: appium, robotium, espresso. W przypadku webowych można używać emulatorów selenium webdriver na aplikacje mobilne |
 | Event Listenery | Zestaw metod, które umożliwiają logowanie akcji ale jedynie tych związanych z webdriverem |
 | Regexp | Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu |
 | Programowanie niskopoziomowe | Programowanie niskiego poziomu to język zrozumiały dla peceta [język maszynowy (kod binarny)] np. assambler |
 | Programowanie wysokopoziomowe | Programowanie wysokiego poziomu to programowanie zrozumiałe dla ludzi np. java. |
-| Cache | Pamięć podręczna. Jest wykorzystywana do szybszego dostępu do danych.
-Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załadowane ponownie nie muszą być ładowane po prostu są pobierane z pamięci podręcznej |
+| Cache | Pamięć podręczna. Jest wykorzystywana do szybszego dostępu do danych. Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załadowane ponownie nie muszą być ładowane po prostu są pobierane z pamięci podręcznej |
 | Protractor | Framework jsowy dedykowany dla angularJS, służący do testów funkcjonalnych. Działa na selenium webdriverze |
 | Środowisko uruchomieniowe | W językach wysokopoziomowych potrzebny jest specjalny interpreter, który przetłumaczy kod na postać binarną zrozumiałą dla maszyny. Przykładami są node.js i jre. |
 | Package Manager | Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu |
@@ -218,17 +208,12 @@ Np. Pamięć podręczna przeglądarki powoduje, że elementy już kiedyś załad
 | :------------- |:-------------|
 | Union | Łączenie tabel o tej samej liczbie kolumn i typie. Usuwa duplikaty |
 | Union ALL | Łączenie tabel o tej samej liczbie kolumn i typie. Nie usuwa duplikatów |
-| Joins | left join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "lewej" tabeli <br/>
-right join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "prawej" tabeli <br/>
-inner join - pokazuje część wspólną tabel <br/>
-outer join - pokazuje część wspólną i nie wspólną tabel <br/>
-cross join - łączy każdy element z tabeli 1 z każdym elementem z tabeli 2|
+| Joins | left join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "lewej" tabeli <br/> right join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "prawej" tabeli <br/> inner join - pokazuje część wspólną tabel <br/> outer join - pokazuje część wspólną i nie wspólną tabel <br/> cross join - łączy każdy element z tabeli 1 z każdym elementem z tabeli 2 |
 | Agregacje w SQL | AVG, SUM, MAX, MIN |
 | EXCEPT | (SQL Server) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
 | MINUS | (Oracle) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
 | Count | Count(*) - zlicza ilość rekordów po wszystkich kolumnach <br/> Count(1) - zlicza ilość rekordów po pierwszej kolumnie |
-| Hurtownia danych | Baza skonstruowana z innych baz relacyjnych celem szybszego dostępu do danych <br/>
-Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele faktów.|
+| Hurtownia danych | Baza skonstruowana z innych baz relacyjnych celem szybszego dostępu do danych <br/> Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele faktów |
 | Dynamiczny SQL | Czyli jak przechowywać zapytania w zmiennej, odpalać je z dowolnego miejsca kodu i przechowywać zwróconą wartość w innej zmiennej. Ma słabą wydajność. Oracle - Execute Immediate, SQL Server - exec sp_executesql |
 | SQL hints | W SQL Server możemy dopomóc przy egzekucji zapytania pewnymi hintami celem przyspieszenia działania zapytania. join hints - merge, loop, hash table hints - NO LOCK|
 | Pivot | Obracanie tabeli |
