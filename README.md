@@ -6,7 +6,7 @@ Nie za krótkie wprowadzenie do technicznych testów
 
 | Zagadnienie       | Opis    |
 | :------------- |:-------------|
-| Trzy zasady programowania obiektowego | Hermetyzacja - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Dziedziczenie - Proces w którym jeden obiekt otrzymuje właściwości innego obiektu <br/> Polimorfizm -To cecha, dzięki której jeden interfejs może być stosowany do wykonania różnych zadań |
+| Trzy zasady programowania obiektowego | Hermetyzacja (Enkapsulacja) - Ograniczenie dostępu do wnętrza programu przez koncepcję klasy, ze względów bezpieczeństwa lub czysto praktycznych <br/> Dziedziczenie - Proces w którym jeden obiekt otrzymuje właściwości innego obiektu <br/> Polimorfizm -To cecha, dzięki której jeden interfejs może być stosowany do wykonania różnych zadań |
 | Przygotowanie danych testowych. Zaprojektowanie testów weryfikujących jakość i ilość przeprocesowanych danych | Baza Danych - Test |
 | Typy danych | Proste/podstawowe <br/> Całkowite <br/> Zmiennoprzecinkowe <br/> Znakowe <br/> Logiczne |
 | Instrukcje sterujące | Instrukcje wyboru <br/> Konstrukcja switch  |
@@ -23,14 +23,18 @@ Nie za krótkie wprowadzenie do technicznych testów
 | final | Zmienne - uniemożliwia modyfikację zmiennej <br/> Metody - uniemożliwia przesłanianiu i dziedziczeniu |
 | super (uwaga w C# nie istnieje) | Można wywołać konstruktor klasy bazowej <br/> Można wywołać, uzyskać dostęp do np. metoda klasy nadrzędnej, które zostały przesłonięte przez klasę pochodną |
 | Metoda przesłonięta | To taka metoda, która ma taką samą nazwę co metoda klasy bazowej. Zostanie ona wykonana. A ta z klasy bazowej ukryta |
-| Klasa abstrakcyjna | Klasa, która stanowi w pewnym sensie jedynie strukturę dla klas podrzędnych. Dopiero klasy dziedziczące implementują np. metody |
+| Klasa abstrakcyjna | Klasa, która stanowi w pewnym sensie jedynie strukturę dla klas podrzędnych. Dopiero klasy dziedziczące implementują np. metody. specjalna klasa zawierająca metody abstrakcyjne i nieabstrakcyjne. Z takiej klasy nie można utworzyć obiektu w tradycyjny sposób, ale można dziedziczyć. |
 | Pakiet | Przestrzeń nazw i sterowanie dostępem. Innymi słowy w pakiecie może istnieć tylko jedna klasa o danej nazwie |
-| Interfejs | To coś jak klasa abstrakcyjna ale ma jedną dużą zaletę, klasa może implementować dowolną liczbę interfejsów |
+| Interfejs | To coś jak klasa abstrakcyjna ale ma jedną dużą zaletę, klasa może implementować dowolną liczbę interfejsów. interfejsy zawierają jedynie deklaracje metod ale klasa może dziedziczyć wiele interfejsów używając słówka implements |
 | Modyfikatory dostępu | private - mamy dostęp jedynie w klasie, w której obiekt został zdefiniowany <br/> brak modyfikatora - mamy dostęp w klasie, w której został obiekt zdefiniowany, w podklasach i innych klasach ale dla danego pakietu <br/> protected - to samo co w przypadku braku modyfikatora + podklasy z innego pakietu <br/> public - dostępny w klasach i podklasach we wszystkich pakietach |
 | Typy wyjątków | |
 | Klauzula try catch | |
 | Garbage Collection | Jak już wiemy np. każdemu nowemu obiektowi przydzielana jest pamięć. W javie pamięcią i jej zwalnianiem nie zajmuje się programista, ale specjalna funkcja/metoda zwana garbage collector |
 | Kolekcje w Javie | Lista <br/> Zbiór <br/> Mapa|
+| Setter i Getter | Settery i Gttery to specjalne metody pozwalające na dostanie się do prywatnych zmiennych z poza klasy, w której ta zmienna została zdefiniowana|
+| Data Model | |
+| Mapper | |
+| Wyrażenie Lambda | |
 
 
 2. REST - podstawy architektury
@@ -116,7 +120,8 @@ Nie za krótkie wprowadzenie do technicznych testów
 | git stash | Wyrzuca dane do schowka |
 | git stash pop | Przywraca dane ze schowka |
 | git pull --rebase | Jak nie chcemy merdżować kodu? |  
-| git fork | Tworzy kopię istniejącego projektu |    
+| git fork | Tworzy kopię istniejącego projektu |   
+| git cherrypick | Jeżeli chcemy przerzucić commita z jednego brancha na drugiego, tak żeby nie merdżować jednego brancha do drugiego|   
 
 
 6. Teoria testowa
