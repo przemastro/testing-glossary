@@ -32,16 +32,12 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Garbage Collection | Jak już wiemy np. każdemu nowemu obiektowi przydzielana jest pamięć. W javie pamięcią i jej zwalnianiem nie zajmuje się programista, ale specjalna funkcja/metoda zwana garbage collector |
 | Kolekcje w Javie | Mapa - lista wartości z kluczem <br/> Lista - lista wartości z duplikatami <br/> Set - lista wartości bez duplikatów, nieposortowane, można je odnaleźć po indeksie |
 | Setter i Getter | Settery i Gttery to specjalne metody pozwalające na dostanie się do prywatnych zmiennych z poza klasy, w której ta zmienna została zdefiniowana|
-| Lombok Data Model | klasa z adnotacją @Data. Adnotacja mówi np. Mavenowi, że w trakcie budowania aplikacji
-ma dodać brakujacy kod i go uruchomić. Ma dodać definicje seterów geterów i inne  |
+| Lombok Data Model | klasa z adnotacją @Data. Adnotacja mówi np. Mavenowi, że w trakcie budowania aplikacji ma dodać brakujacy kod i go uruchomić. Ma dodać definicje seterów geterów i inne  |
 | Jackson Object Mapper | służy do parsowania json'a z pliku, stringa do obiektu javowego. Używamy tutaj geterów i seterów z osobnej klasy, lub datamodel class np. używając lomboka z wbudowanymi getterami i setterami. Co zawiera metoda readValue: parametr1 - wartości dla setterów, np. z pliku yaml / parametr2 - datamodel class |
 | Jackson | biblioteka do procesowania jsona |
 | Hashcode i Equals | metody służące do porówania obiektów: Hashcode zwraca integera obiektu |
 | @NoArgsConstructor | generuje konstruktor bez argumentów |
-| SOLID | wzorzec projektowy, programowania obiektowego: <br/>
-- Klasa powinna mieć tylko jedną odpowiedzialność np. za "kontakt" z bazą danych <br/>
-- Wiele interfejsów zamiast jednego ogólnego <br/>
-- Klasy powinny być otwarte na rozszerzenia a nie na modyfikacje |
+| SOLID | wzorzec projektowy, programowania obiektowego: <br/> Klasa powinna mieć tylko jedną odpowiedzialność np. za "kontakt" z bazą danych <br/> Wiele interfejsów zamiast jednego ogólnego <br/> Klasy powinny być otwarte na rozszerzenia a nie na modyfikacje |
 
 
 2. REST - podstawy architektury
