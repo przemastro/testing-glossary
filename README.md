@@ -30,10 +30,7 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Typy wyjątków | |
 | Klauzula try catch | |
 | Garbage Collection | Jak już wiemy np. każdemu nowemu obiektowi przydzielana jest pamięć. W javie pamięcią i jej zwalnianiem nie zajmuje się programista, ale specjalna funkcja/metoda zwana garbage collector |
-| Kolekcje w Javie | 
-- Mapa - lista wartości z kluczem <br/>
-- Lista - lista wartości z duplikatami <br/>
-- Set - lista wartości bez duplikatów, nieposortowane, można je odnaleźć po indeksie |
+| Kolekcje w Javie | Mapa - lista wartości z kluczem <br/> Lista - lista wartości z duplikatami <br/> Set - lista wartości bez duplikatów, nieposortowane, można je odnaleźć po indeksie |
 | Setter i Getter | Settery i Gttery to specjalne metody pozwalające na dostanie się do prywatnych zmiennych z poza klasy, w której ta zmienna została zdefiniowana|
 | Lombok Data Model | klasa z adnotacją @Data. Adnotacja mówi np. Mavenowi, że w trakcie budowania aplikacji
 ma dodać brakujacy kod i go uruchomić. Ma dodać definicje seterów geterów i inne  |
