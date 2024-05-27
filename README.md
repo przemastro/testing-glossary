@@ -39,24 +39,7 @@ Nie za krótkie wprowadzenie do technicznych testów
 | @NoArgsConstructor | generuje konstruktor bez argumentów |
 | SOLID | wzorzec projektowy, programowania obiektowego: <br/> Klasa powinna mieć tylko jedną odpowiedzialność np. za "kontakt" z bazą danych <br/> Wiele interfejsów zamiast jednego ogólnego <br/> Klasy powinny być otwarte na rozszerzenia a nie na modyfikacje |
 
-
-2. REST - podstawy architektury
-
-| Zagadnienie       | Opis    |
-| :------------- |:-------------|
-| Czym jest REST? | To zestaw metod i dobrych praktyk definiujących sposób komunikacji między systemami. Może to być np. komunikacja Klient - Serwer. Komunikacja odbywa się przez protokół HTTP |
-| Czym jest API? | To samo co powyżej ale ogólnie. Zestaw protokołów, rutyn, narzędzi |
-| Serwer | Utożsamiany z backendem program, który świadczy usługi dla innych programów. Komunikuje się z bazą i klientem |
-| Klient | Program komputerowy występujący w roli klienta usług dostarczanych przez serwer |
-| Po co REST API? | Ustandaryzowanie zasad tak by każdy ze swoją technologią mógł się komunikować z "obcą" technologią potencjalnie niekompatybilną |
-| Metody HTTP | GET - request danych ze źródła <br/> POST - update danych w źródle <br/> PUT - zapisanie danych w źródle <br/> DELETE - usunięcie danych  <br/> OPTIONS <br/> HEAD |
-| Najważniejsze Statusy Odpowiedzi | 200 - OK <br/> 201 - Created <br/> 500 - Internal Server Error <br/> 400 - Bad request <br/> 401 - Unauthorized <br/> 404 - Not found |
-| Co testować? | Backend validation - walidacja pól <br/> Uwierzytelnianie - czy endpointy są zabezpieczone przed nieporządanym dostępem |
-| CORS requests | Mechanizm umożliwiający współdzielenie zasobów pomiędzy serwerem i klientem znajdującymi się w różnych domenach, czyli wykonywania żądań AJAXowych przy zachowaniu pewnych ograniczeń co do dopuszczalnego źródła danych |
-| Headers | Nagłówki to pewnego rodzaju polecenia służące do komunikacji między serwerem a klientem np. Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Allow-Methods |
-
-
-3. Technologie i frameworki developerskie
+2. Technologie i frameworki developerskie
 
 | Zagadnienie       | Opis    |
 | :------------- |:-------------|
@@ -82,50 +65,6 @@ Nie za krótkie wprowadzenie do technicznych testów
 | JDK | Środowisko do programowania w Javie. Zawiera kompilatory Javy, wirtualne maszyny itd |
 | JQuery | Biblioteka JS-owa |
 | Ant | Build Manager (java) |
-
-
-4. Continuous Integration - kroki i proces
-
-| Zagadnienie       | Opis    |
-| :------------- |:-------------|
-| Po co? | Szybka możliwość weryfikacja i przetestowanie zmian wrzucanych na środowisko połączona z integracją z innymi systemami oraz możliwość zaprezentowania na demo |
-| Konfiguracja | Określenie nazwy builda i build countera <br/> Zintegrowanie joba ze zdalnym repozytorium <br/> Określenie build stepów i gdzie powinny się odpalać <br/> Określenie triggerów <br/> Określenie w jakich warunkach job powinien failować i jeszcze dodatkowe parametry jak odpalanie dodatkowych skryptów po buildzie. |
-| Night build | Zazwyczaj pełna lista testów jest odpalana. Job zaskedżulowany |
-| Daily build | Przetestowanie korowych funkcjonalności po każdym komicie |
-| Narzędzia CI | Jenkins, TeamCity, CruiseControl, Bamboo, Firebase, Bitrise |
-
-
-5. GIT komendy i VCS
-
-| Zagadnienie       | Opis    |
-| :------------- |:-------------|
-| Narzędzia VCS | GIT, Perforce, SVN |
-| Klienci VCS i wtyczki | Stash, Bitbucket, GitLab, Tortoise |
-| git config | Konfiguracja np. Credentiali, wielkości danych puszowanych |
-| git init | Inicjalizuje lokalne repozytorium |
-| git clone | Klonuje zawartość zdalnego repozytorium do lokalnego |
-| git add | Umożliwia dodanie plików do zakomitowania |
-| git commit | Komituje pliki do spuszowania |
-| git push origin master | Wysyła pliki na zdalne repo z master brancha lokalnego na zdalnego |
-| git status | Pokazuje, na którym branchu jesteśmy |
-| git remote add origin | Powiązanie ze zdalnym repozytorium |
-| git checkout <branchname>  | Tworzy nowego brancha lub przeskakuje na istniejącego |
-| git branch | Tworzy nowego brancha |
-| git branch -d <branchname> | Usuwa istniejącego brancha |
-| git pull | Zaciąga dane ze zdalnego repozytorium |
-| git merge <branchname> | Łączy dane ze zdalnego brancha z danymi na lokalnym branchu |
-| git diff | Pokazuje różnice między commitami |
-| git tag 1.0.0 <commitID> | Oznaczenie komita |
-| git log | Pokazuje historię commitów |
-| git fetch  | git fetch = git pull + git merge |
-| git reset --hard <branchname> | Przeskakuje do ostatniego zakomitowanego brancha |
-| git grep "string" | Szukamy określonego wzorca w lokalnym repo |
-| git stash | Wyrzuca dane do schowka |
-| git stash pop | Przywraca dane ze schowka |
-| git pull --rebase | Jak nie chcemy merdżować kodu? |  
-| git fork | Tworzy kopię istniejącego projektu |   
-| git cherrypick | Jeżeli chcemy przerzucić commita z jednego brancha na drugiego, tak żeby nie merdżować jednego brancha do drugiego|   
-
 
 6. Teoria testowa
 
@@ -208,34 +147,6 @@ Nie za krótkie wprowadzenie do technicznych testów
 | Środowisko uruchomieniowe | W językach wysokopoziomowych potrzebny jest specjalny interpreter, który przetłumaczy kod na postać binarną zrozumiałą dla maszyny. Przykładami są node.js i jre. |
 | Package Manager | Ciąg znaków określający szukany wzorzec. Np. .* szukamy plików dowolnego formatu |
 | Regexp | System do automatycznej instalacji, konfiguracji, aktualizacji i usuwania pakietów oprogramowania |
-
-
-8. SQL
-
-| Zagadnienie       | Opis    |
-| :------------- |:-------------|
-| Union | Łączenie tabel o tej samej liczbie kolumn i typie. Usuwa duplikaty |
-| Union ALL | Łączenie tabel o tej samej liczbie kolumn i typie. Nie usuwa duplikatów |
-| Joins | left join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "lewej" tabeli <br/> right join - pokazuje część wspólną dwóch tabel oraz pozostałe rekordy w "prawej" tabeli <br/> inner join - pokazuje część wspólną tabel <br/> outer join - pokazuje część wspólną i nie wspólną tabel <br/> cross join - łączy każdy element z tabeli 1 z każdym elementem z tabeli 2 |
-| Agregacje w SQL | AVG, SUM, MAX, MIN |
-| EXCEPT | (SQL Server) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
-| MINUS | (Oracle) odejmuje dwie tabele o takiej samej ilości kolumn i tych samych typach danych |
-| Count | Count(*) - zlicza ilość rekordów po wszystkich kolumnach <br/> Count(1) - zlicza ilość rekordów po pierwszej kolumnie |
-| Hurtownia danych | Baza skonstruowana z innych baz relacyjnych celem szybszego dostępu do danych <br/> Podstawowymi elementami są: Staging area, Atomisation, Dimensions i Tabele faktów |
-| Dynamiczny SQL | Czyli jak przechowywać zapytania w zmiennej, odpalać je z dowolnego miejsca kodu i przechowywać zwróconą wartość w innej zmiennej. Ma słabą wydajność. Oracle - Execute Immediate, SQL Server - exec sp_executesql |
-| SQL hints | W SQL Server możemy dopomóc przy egzekucji zapytania pewnymi hintami celem przyspieszenia działania zapytania. join hints - merge, loop, hash table hints - NO LOCK|
-| Pivot | Obracanie tabeli |
-| Tabela CTE | Common table expression - służąca chociażby do insertowania w jednym zapytaniu dużej ilości rekordów |
-| Klucze | Primary key <br/> Foreign key |
-| Constraints | Określają ograniczenia kolumn: not null, unique, primary key, foreign key, index |
-| Grupowanie | Grupowanie należy wykonywać po niezagregowanych kolumnach |
-| Transakcje | Insert, update, delete |
-| Indeksy | Klastrone <br/> Nieklastrowe |
-| Konwertowanie danych | Convert - więcej możemy zrobić z datą niż w przypadku cast <br/> Cast - jest standardem ANSI |
-| Trimming | ltrim - wycina spację z lewej strony <br/ >rtrim - wycina spację z prawej strony |
-| Truncate | Chyba nie zwraca uwagi na klucze. Usuwa jak leci |
-| Delete | Tutaj niestety errory wyskoczą, jak są indeksy i klucze pozakładane |
-
 
 9. Komendy bash
 
