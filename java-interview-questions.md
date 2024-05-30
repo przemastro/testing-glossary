@@ -330,3 +330,114 @@ return SingletonHelper.INSTANCE;
 List<String> filteredNames = names.stream()
 .filter(name -> name.startsWith("J"))
 .collect(Collectors.toList());
+
+21. What is Lombok
+    
+ - Lombok is a Java library that helps to reduce boilerplate code by generating common methods such as getters, setters, toString, equals, hashCode, and constructors automatically at compile time using annotations. It makes the code more readable and maintainable by reducing the amount of boilerplate code.
+
+Here is a typical Java class with getters, setters, and other methods:
+
+
+> private String firstName;
+private String lastName;
+private int age;
+
+    public Person() {}
+
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        if (age != person.age) return false;
+        if (firstName != null ? !firstName.equals(person.firstName) : person.firstName != null) return false;
+        return lastName != null ? lastName.equals(person.lastName) : person.lastName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = firstName != null ? firstName.hashCode() : 0;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + age;
+        return result;
+    }}
+
+Here’s the same class using Lombok annotations to reduce boilerplate code:
+
+> import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Person {
+private String firstName;
+private String lastName;
+private int age;
+}
+@Data: A shortcut for @Getter, @Setter, @ToString, @EqualsAndHashCode, and @RequiredArgsConstructor.
+@NoArgsConstructor: Generates a no-argument constructor.
+@AllArgsConstructor: Generates a constructor with one parameter for each field.
+Usage Example
+java
+Skopiuj kod
+public class Main {
+public static void main(String[] args) {
+Person person = new Person("John", "Doe", 30);
+
+        System.out.println(person.getFirstName()); // Output: John
+        System.out.println(person); // Output: Person(firstName=John, lastName=Doe, age=30)
+
+        Person anotherPerson = new Person("Jane", "Doe", 25);
+        
+        System.out.println(person.equals(anotherPerson)); // Output: false
+    }}
+
+Benefits of Lombok
+ - Less Boilerplate Code: Lombok significantly reduces the amount of boilerplate code in your classes.
+ - Improved Readability: With less boilerplate, the essential parts of your code are easier to read and understand.
+ - Time-Saving: Lombok saves time by auto-generating common methods, so developers can focus on business logic.
+Drawbacks
+ - Learning Curve: New developers need to learn Lombok’s annotations and understand its behavior.
+ - Dependency: Your project depends on Lombok at compile-time, which could be an issue if Lombok is not compatible with future Java versions or other libraries.
