@@ -46,6 +46,26 @@ cy.url().should('include', '/documentation')
 
  > npx cypress run
 
+11. What does 'require' in javascript?
+
+ - In JavaScript, particularly in Node.js environments, require is a function used to include modules (both built-in and external) in your application. It allows you to import functionality from other files or packages, enabling code modularization and reuse.
+
+12. What are the plugins file responsibilities?
+
+ - Extend Cypress Functionality
+
+13. What are the support file responsibilities?
+
+ - Global Configuration and Behavior, Set up global hooks
+
+14. What is 'describe' block?
+
+ - The describe block is used to group related tests together. It defines a test suite, allowing you to logically organize your tests.  It typically contains one or more it blocks (test cases) and can also contain nested describe blocks for further sub-grouping.
+
+15. What is mocha?
+
+ - Mocha is a test runner that provides a way to structure your tests with describe and it blocks.
+
 ### Moderate Questions:
 1. How do you handle assertions in Cypress?
 
@@ -98,6 +118,97 @@ cy.get('input[type="file"]').attachFile(filePath)
 cy.route('GET', '/api/endpoint', 'fixture:data.json').as('getData')
 cy.visit('/page')
 cy.wait('@getData')
+  
+11. Sync vs Async operations and testing
+
+Understanding synchronous and asynchronous operations is crucial for effective testing, especially in JavaScript, where asynchronous operations are common. Let's break down the concepts and how different testing frameworks handle them.
+
+Synchronous vs. Asynchronous Operations
+
+#### Synchronous Operations:
+
+ - Execute sequentially, one after the other.
+ - Each operation waits for the previous one to complete before starting.
+ - Blocking, meaning the execution stops at each step until the current operation is done.
+
+> console.log('Start');
+console.log('Middle');
+console.log('End');
+
+#### Asynchronous Operations:
+
+ - Execute independently of the main program flow.
+ - Operations can start before previous ones complete.
+ - Non-blocking, meaning the execution can move on to other tasks while waiting for an asynchronous operation to complete.
+
+> console.log('Start');
+setTimeout(() => console.log('Middle'), 1000);
+console.log('End');
+ 
+#### Asynchronous Testing
+
+Asynchronous testing involves writing tests that can handle asynchronous operations like network requests, timers, and file I/O. Testing frameworks handle these operations differently.
+
+Testing Frameworks: Async vs. Sync
+
+Mocha
+
+   Asynchronous Testing:
+
+   - Mocha provides several mechanisms to handle asynchronous operations, including callbacks, promises, and async/await.
+
+Example:
+
+Using Callbacks:
+
+ > it('should fetch data with callback', function(done) {
+fetchData((data) => {
+assert.equal(data, 'expectedData');
+done();
+});
+});
+
+Using Promises:
+
+ > it('should fetch data with promise', function() {
+return fetchData().then((data) => {
+assert.equal(data, 'expectedData');
+});
+});
+
+Using Async/Await:
+
+ > it('should fetch data with async/await', async function() {
+const data = await fetchData();
+assert.equal(data, 'expectedData');
+});
+ 
+Cypress
+
+   Asynchronous Testing:
+
+   - Cypress abstracts much of the complexity of asynchronous testing by automatically waiting for commands and assertions to complete.
+
+
+ > describe('Asynchronous Operations in Cypress', () => {
+it('should handle async operations', () => {
+cy.visit('/page');
+cy.get('button').click();  // Assumes button click triggers an async operation
+cy.get('.result').should('contain', 'Expected Result');
+});
+});
+
+12. Callbacks
+
+ - A callback is a function passed as an argument to another function. It is executed after the completion of a specific task or operation.
+
+13. Promises
+
+ - A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+14. Async/Await
+
+ - Async/await is a modern syntax for working with asynchronous code in JavaScript. It allows you to write asynchronous code in a synchronous-looking manner.
 
 ### Difficult Questions:
 1. How do you implement custom commands in Cypress?
