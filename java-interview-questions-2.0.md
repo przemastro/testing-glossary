@@ -1,4 +1,4 @@
-# Garbage Collection and Collections in Java
+### Garbage Collection and Collections in Java
 
 **Garbage Collector** - a memory management process. In Java, when creating an object, memory is allocated using the `new` keyword.  
 
