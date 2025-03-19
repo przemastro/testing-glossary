@@ -7,33 +7,30 @@ This document contains examples of how to connect to an SQL database and retriev
 ## Python (using `pyodbc`)
 
 ```python
-import pyodbc
+import mysql.connector
 
-# Connection settings
-server = 'localhost'
-database = 'TestDB'
-username = 'your_username'
-password = 'your_password'
+connection = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="TestDB"
+)
 
-# Create connection
-conn = pyodbc.connect(f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}')
-cursor = conn.cursor()
+cursor = connection.cursor()
 
-# SQL Query
 cursor.execute("SELECT id, name, email FROM users")
 
-# Fetch data
-rows = cursor.fetchall()
+results = cursor.fetchall()
 
-# Print results
-for row in rows:
-    print(f"ID: {row.id}, Name: {row.name}, Email: {row.email}")
+for row in results:
+    id, name, email = row
+    print(f"ID: {id}, Name: {name}, Email: {email}")
 
-# Close connection
-conn.close()
+cursor.close()
+connection.close()
+
 
 ```
-
 ## Java - Connecting to SQL Database and Fetching Data
 
 ```java
